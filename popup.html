@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+        body {
+            width: 300px;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            margin: 5px 0;
+        }
+        
+        button:hover {
+            background: #45a049;
+        }
+        
+        .fill-button {
+            background: #2196F3;
+        }
+        
+        .fill-button:hover {
+            background: #1976D2;
+        }
+        
+        .status {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        
+        .success {
+            background: #dff0d8;
+            color: #3c763d;
+            border: 1px solid #d6e9c6;
+        }
+        
+        .error {
+            background: #f2dede;
+            color: #a94442;
+            border: 1px solid #ebccd1;
+        }
+    </style>
+</head>
+<body>
+    <h3>AutoFill Google Form</h3>
+    
+    <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+    </div>
+    
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email">
+    </div>
+    
+    <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" placeholder="Enter your phone">
+    </div>
+    
+    <div class="form-group">
+        <label for="registrationNumber">Registration Number:</label>
+        <input type="text" id="registrationNumber" placeholder="Enter your registration number">
+    </div>
+    
+    <div class="form-group">
+        <label for="passoutBatch">Passout Batch:</label>
+        <input type="text" id="passoutBatch" placeholder="e.g., 2023, 2020-24">
+    </div>
+    
+    <div class="form-group">
+        <label for="branch">Branch:</label>
+        <input type="text" id="branch" placeholder="e.g., Computer Science, Mechanical">
+    </div>
+
+    <div class="form-group">
+        <label for="specialization">Specialization:</label>
+        <input type="text" id="specialization" placeholder="e.g., Core, AI, ML">
+    </div>
+    
+    <div class="form-group">
+        <label for="cgpa">CGPA:</label>
+        <input type="text" id="cgpa" placeholder="e.g., 8.5, 3.7">
+    </div>
+    
+    <div class="form-group">
+        <label for="tenthMarks">10th Percentage/GPA:</label>
+        <input type="text" id="tenthMarks" placeholder="e.g., 85%, 9.2">
+    </div>
+    
+    <div class="form-group">
+        <label for="twelfthMarks">12th Percentage:</label>
+        <input type="text" id="twelfthMarks" placeholder="e.g., 82%, 87.5%">
+    </div>
+    
+    <div class="form-group">
+        <label for="resumeLink">Resume Link:</label>
+        <input type="url" id="resumeLink" placeholder="https://drive.google.com/...">
+    </div>
+    
+    <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender">
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+            <option value="Prefer not to say">Prefer not to say</option>
+        </select>
+    </div>
+    
+    <button id="saveData">Save Data</button>
+    <button id="fillForm" class="fill-button">Fill Current Form</button>
+    
+    <div id="status"></div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
